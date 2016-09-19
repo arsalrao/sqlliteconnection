@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
  */
 public class StateSaveFragment extends Fragment {
 
-    private Integer integer ;
+    private Double aDouble;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,11 +17,11 @@ public class StateSaveFragment extends Fragment {
         setRetainInstance(true);
     }
 
-    public Integer getInteger() {
-        return integer;
+    public Double getaDouble() {
+        return aDouble;
     }
 
-    public void setInteger(Integer integer) {
-        this.integer = integer;
+    public void setaDouble(Double aDouble) {
+        this.aDouble = aDouble;
     }
 }

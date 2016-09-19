@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class SaveStateActivity extends AppCompatActivity {
 
-    private int scroll ;
+    private double scroll ;
 
     private StateSaveFragment stateSaveFragment ;
     @Override
@@ -30,12 +30,12 @@ public class SaveStateActivity extends AppCompatActivity {
 
 
         if (stateSaveFragment !=null){
-            scroll = stateSaveFragment.getInteger() ;
+            scroll = stateSaveFragment.getaDouble() ;
         }else {
 
             stateSaveFragment = new StateSaveFragment();
             fragmentManager.beginTransaction().add(stateSaveFragment , "data").commit();
-            stateSaveFragment.setInteger(scroll);
+            stateSaveFragment.setaDouble(scroll);
             Toast.makeText(SaveStateActivity.this, "integer is null", Toast.LENGTH_SHORT).show();
         }
 
@@ -82,7 +82,7 @@ public class SaveStateActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        stateSaveFragment.setInteger(scroll);
+        stateSaveFragment.setaDouble(scroll);
         Toast.makeText(SaveStateActivity.this, "onDestroy", Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
