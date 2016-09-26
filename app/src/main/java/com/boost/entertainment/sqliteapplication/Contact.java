@@ -16,7 +16,7 @@ public class Contact {
         this.email = email;
         this.address = address;
     }
-
+        //default constructor
     public Contact(){}
 
     public String getName() {
